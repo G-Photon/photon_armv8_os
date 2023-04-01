@@ -22,13 +22,5 @@ pub extern "C" fn not_main() {
     "#;
 
   print!("{}",banner);
-  let mut i = 0; // 初始值
-  while i <= 6 { // 判断条件
-    println!("{}", i);
-    if i <= 3 {
-      i += 1
-    }
-    i += 1; // 累加值
-  }
   // ...
 }
