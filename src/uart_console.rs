@@ -16,14 +16,13 @@ impl Writer {
             self.write_byte(byte as u8)
         }
     }
-
 }
 impl core::fmt::Write for Writer {
-  fn write_str(&mut self, s: &str) -> fmt::Result {
-      self.write_string(s);
+    fn write_str(&mut self, s: &str) -> fmt::Result {
+        self.write_string(s);
 
-      Ok(())
-  }
+        Ok(())
+    }
 }
 use lazy_static::lazy_static;
 use spin::Mutex;
@@ -49,8 +48,16 @@ macro_rules! println {
 
 /// Prints the given formatted string to the VGA text buffer through the global `WRITER` instance.
 #[doc(hidden)]
-pub fn _print(args: fmt::Arguments) {
+pub fn _print(args: fmt::Arguments) -> &str {
     use core::fmt::Write;
 
     WRITER.lock().write_fmt(args).unwrap();
+    "Successful!"
+}
+
+#[macro_export]
+macro_rules! print_result {
+    ($expression:expr) => {
+        println!("{} = {}", stringify! {$expression}, $expression)
+    };
 }

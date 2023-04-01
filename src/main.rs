@@ -3,14 +3,14 @@
 // 不使用预定义入口点
 #![no_main]
 #![feature(global_asm)]
-mod uart_console;
 mod panic;
+mod uart_console;
 global_asm!(include_str!("start.s"));
 #[no_mangle] // 不修改函数名
 pub extern "C" fn not_main() {
-      // ...
+    // ...
 
-  let banner = r#"
+    let banner = r#"
   ____   _____                          _____  __  __        ___                  _           _              
  / __ \ / ____|                   /\   |  __ \|  \/  |      / _ \     ____       | |         | |             
 | |  | | (___     ___  _ __      /  \  | |__) | \  / |_   _| (_) |   / __ \ _ __ | |__   ___ | |_ ___  _ __  
@@ -19,8 +19,8 @@ pub extern "C" fn not_main() {
  \____/|_____/   \___/|_| |_| /_/    \_\_|  \_\_|  |_| \_/  \___/   \ \__,_| .__/|_| |_|\___/ \__\___/|_| |_|
                                                                      \____/| |                               
                                                                            |_|                               
-    "#;
+"#;
 
-  print!("{}",banner);
-  // ...
+    print_result!(print!("{}", banner));
+    // ...
 }

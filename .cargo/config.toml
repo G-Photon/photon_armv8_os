@@ -1,3 +1,5 @@
 [build]
 target = "aarch64-unknown-none-softfloat"
 rustflags = ["-C","link-arg=-Taarch64-qemu.ld", "-C", "target-cpu=cortex-a53", "-D", "warnings"]
+[target.aarch64-unknown-none-softfloat]
+runner = "qemu-system-aarch64 -machine virt -m 1024M -cpu cortex-a53 -nographic -kernel"
