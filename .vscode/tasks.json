@@ -6,7 +6,7 @@
         {
             "label": "qemu: gdb",
             "type": "shell",
-            "command": "${workspaceFolder}/.vscode/start_qemu_armv8_os.sh",
+            "command": "${workspaceFolder}/start_qemu_armv8_os.sh",
             "presentation": {
                 "echo": true,
                 "clear": true

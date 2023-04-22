@@ -13,7 +13,8 @@ edition = "2021"
 [dependencies]
 # device_tree = "1.1.0"
 spin = "0.9.2"
-
+tock-registers = "0.7.0"
+# tock-registers = { version = "0.7.0", default-features = false, features = ["register_types"], optional = true }
 [dependencies.lazy_static]
 version = "1.0"
 features = ["spin_no_std"]

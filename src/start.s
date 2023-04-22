@@ -5,6 +5,12 @@
 _start:
         ldr     x30, =LD_STACK_PTR
         mov     sp, x30
+
+        //Initialize exceptions
+        ldr     x0, =exception_vector_table
+        msr     vbar_el1, x0
+        isb
+
         bl      not_main
 
 .equ PSCI_SYSTEM_OFF, 0x84000002

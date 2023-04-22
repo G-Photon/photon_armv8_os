@@ -33,6 +33,7 @@ version = "0.1.0"
 dependencies = [
  "lazy_static",
  "spin 0.9.6",
+ "tock-registers",
 ]
 
 [[package]]
@@ -55,3 +56,9 @@ checksum = "b5d6e0250b93c8427a177b849d144a96d5acc57006149479403d7861ab721e34"
 dependencies = [
  "lock_api",
 ]
+
+[[package]]
+name = "tock-registers"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4ee8fba06c1f4d0b396ef61a54530bb6b28f0dc61c38bc8bc5a5a48161e6282e"
