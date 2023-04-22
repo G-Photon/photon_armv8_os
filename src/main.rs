@@ -27,9 +27,9 @@ pub extern "C" fn not_main() {
 //     print_result!(print!("{}", banner));
     //println!("Hello, interrupt!");
     println!("It did not crash!");
-    // loop {
-    //     print!("-");
-    // }
     interrupts::init_gicv2();
-    loop {}
+    loop {
+        print!("-");
+    }
+
 }
