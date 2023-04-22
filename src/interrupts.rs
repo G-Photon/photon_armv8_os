@@ -254,7 +254,7 @@ fn handle_timer_irq(_ctx: &mut ExceptionCtx){
         //asm!("add x1, x1, x1");
         asm!("msr CNTP_TVAL_EL0, x1");
     }
-    println!("Time interrupts!");
+//    println!("Time interrupts!");
 
 }
 
