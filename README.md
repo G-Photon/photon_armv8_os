@@ -1,0 +1,2 @@
+湖南大学操作系统实验
+blogos 是Philipp Oppermann用rust语言编写的面向x86架构的简单操作系统，本实验目的是用于将blog os移植到arm v8平台。
